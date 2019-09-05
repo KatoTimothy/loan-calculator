@@ -1,0 +1,38 @@
+.container {
+	width: 95%;
+	font-family: "acumin pro";
+}
+td.payments {
+	font-weight: 600;
+}
+
+table {
+	/*	width: 80%;*/
+	border-spacing: 10px 5px;
+	font-family: inherit;
+	width: 50%;
+}
+
+td,
+table,
+th {
+	border-collapse: separate;
+	text-align:
+}
+
+
+button {
+	font-size: 1.1em;
+	font-weight: bold;
+	border-radius: 2px;
+	border: 1px solid;
+	outline: none;
+}
+
+
+input[type="text"] {
+	outline: none;
+	border: solid 1px;
+	border-radius: 3px;
+	padding: 4px 0 0 4px;
+}
