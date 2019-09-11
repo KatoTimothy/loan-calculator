@@ -17,7 +17,8 @@ h2 {
 }
 
 td.payments {
-	font-weight: 600;
+	font-weight: 550;
+	font-size: .9em;
 }
 
 table {
@@ -25,7 +26,7 @@ table {
 	border-spacing: 10px 5px;
 	font-family: inherit;
 	width: 50%;
-	border: 1px solid darkslategray;
+	border: 1px solid maroon;
 	padding: 5px;
 }
 
