@@ -1,7 +1,21 @@
 .container {
 	width: 95%;
 	font-family: "acumin pro";
+	background: lightgray;
+	padding: 5px;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+h2 {
+	text-align: left;
+	margin-left: 5px;
+	text-transform: uppercase;
+	color: maroon;
+}
+
 td.payments {
 	font-weight: 600;
 }
@@ -11,28 +25,36 @@ table {
 	border-spacing: 10px 5px;
 	font-family: inherit;
 	width: 50%;
+	border: 1px solid darkslategray;
+	padding: 5px;
 }
 
 td,
 table,
 th {
 	border-collapse: separate;
-	text-align:
+	text-align: left;
 }
 
+.titles {
+	font-weight: bold;
+}
 
 button {
-	font-size: 1.1em;
-	font-weight: bold;
-	border-radius: 2px;
+	border-radius: 5px;
+	font-size: 12pt;
 	border: 1px solid;
 	outline: none;
+	background: maroon;
+	color: white;
+	padding: 2px 5px;
+	width: 150px;
 }
 
 
 input[type="text"] {
 	outline: none;
-	border: solid 1px;
+	border: solid 1px maroon;
 	border-radius: 3px;
 	padding: 4px 0 0 4px;
 }
