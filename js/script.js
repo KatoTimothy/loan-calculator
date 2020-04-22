@@ -20,46 +20,49 @@ LOAN APP FORMULARS
 
 
 /*LOAN CALCULATOR APP*/
-$(() => {
-	function loanCalculator() {
 
-		//Get elements
-		var calculateButton = document.getElementById("calculate"),
-			monthlyPayEl = document.getElementById("month_pay"),
-			totalPayEl = document.getElementById("total_pay"),
-			totalInterestEl = document.getElementById("total_interest"),
+function loanCalculator() {
 
-			monthlyPayment = 0,
-			totalPayment = 0,
-			totalInterest = 0;
+	//Get elements
+	var calculateButton = document.getElementById("calculate"),
+		monthlyPayEl = document.getElementById("month_pay"),
+		totalPayEl = document.getElementById("total_pay"),
+		totalInterestEl = document.getElementById("total_interest"),
 
-		/*Add click event listener to the calculate Button*/
-		calculateButton.addEventListener("click", function (event) {
+		monthlyPayment = 0,
+		totalPayment = 0,
+		totalInterest = 0;
 
-			/*Fetch values entered by user*/
-			let loanAmount = document.getElementById("principle").value,
-				//Convert interest to per month
-				monthlyInterest = document.getElementById("interest").value / 100 / 12,
-				//Convert repay period from years to months
-				repayPeriod = document.getElementById("period").value * 12;
+	/*Add click event listener to the calculate Button*/
+	calculateButton.addEventListener("click", function (event) {
 
-			//Compute monthly pay 
-			monthlyPayment = (loanAmount * monthlyInterest / (1 - Math.pow((monthlyInterest + 1), -repayPeriod)));
-			//display computed monthly payment and round off to 2 decimal places
-			monthlyPayEl.innerHTML = "$ " + monthlyPayment.toFixed(2);
+		/*Fetch values entered by user*/
+		let loanAmount = document.getElementById("principle").value,
+			//Convert interest to per month
+			monthlyInterest = document.getElementById("interest").value / 100 / 12,
+			//Convert repay period from years to months
+			repayPeriod = document.getElementById("period").value * 12;
+
+		//Compute monthly pay 
+		monthlyPayment = (loanAmount * monthlyInterest / (1 - Math.pow((monthlyInterest + 1), -repayPeriod)));
+		//display computed monthly payment and round off to 2 decimal places
+		monthlyPayEl.innerHTML = "$ " + monthlyPayment.toFixed(2);
 
 
-			//compute total payment
-			totalPayment = (monthlyPayment * repayPeriod);
-			//display computed total payment and round to 2 decimal places
-			totalPayEl.innerHTML = "$ " + totalPayment.toFixed(2);
+		//compute total payment
+		totalPayment = (monthlyPayment * repayPeriod);
+		//display computed total payment and round to 2 decimal places
+		totalPayEl.innerHTML = "$ " + totalPayment.toFixed(2);
 
-			//compute total interest
-			totalInterest = totalPayment - loanAmount;
-			//display total interest and round off to 2 decimal places
-			totalInterestEl.innerHTML = "$ " + totalInterest.toFixed(2);
-		});
+		//compute total interest
+		totalInterest = totalPayment - loanAmount;
+		//display total interest and round off to 2 decimal places
+		totalInterestEl.innerHTML = "$ " + totalInterest.toFixed(2);
+	});
 
-	}
+}
+
+$(function () {
 	loanCalculator();
 })
+
