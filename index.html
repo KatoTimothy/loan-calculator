@@ -2,104 +2,105 @@
 
 <html>
 
-	<head>
-		<title>JavaScript Loan Calculator</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
-		<link href="css/styles.css" rel="stylesheet" type="text/css">
-	</head>
+<head>
+	<title>JavaScript Loan Calculator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
 
-	<body>
-		<div class="container">
-			<h2>Loan Calculator</h2>
-			<form id="loan" method="post" action="#">
-				<table id="loan_data">
-					<!--		Header row-->
-					<tr>
-						<th>Enter Loan Data</th>
-					</tr>
-					<!--first row-->
-					<tr>
-						<td>
-							<label for="principle">Amount of the loan ($):</label>
-						</td>
-						<td>
-							<input type="text" name="principle" id="principle" value="100000">
-						</td>
-					</tr>
+<body>
+	<div class="container">
+		<h2>Loan Calculator</h2>
+		<form id="loan" method="post" action="#">
+			<table id="loan_data">
+				<!--		Header row-->
+				<tr>
+					<th>Enter Loan Data</th>
+				</tr>
+				<!--first row-->
+				<tr>
+					<td>
+						<label for="principle">Amount of the loan ($):</label>
+					</td>
+					<td>
+						<input type="text" name="principle" id="principle" value="100000">
+					</td>
+				</tr>
 
-					<!--second row-->
-					<tr>
-						<td>
-							<label for="interest">Annual interest (%):</label>
-						</td>
-						<td>
-							<input type="text" name="annual_interest" id="interest" value="5">
-						</td>
-					</tr>
+				<!--second row-->
+				<tr>
+					<td>
+						<label for="interest">Annual interest (%):</label>
+					</td>
+					<td>
+						<input type="text" name="annual_interest" id="interest" value="5">
+					</td>
+				</tr>
 
-					<!--			third row-->
+				<!--			third row-->
 
-					<tr>
-						<td>
-							<label for="period">Repayment period (years):</label>
-						</td>
-						<td>
-							<input type="text" name="repay_period" id="period" value="30">
-						</td>
-					</tr>
-					<!--			Fourth row-->
+				<tr>
+					<td>
+						<label for="period">Repayment period (years):</label>
+					</td>
+					<td>
+						<input type="text" name="repay_period" id="period" value="30">
+					</td>
+				</tr>
+				<!--			Fourth row-->
 
-					<tr>
-						<td>
-							<label for="zip">Zipcode (to find lenders): </label>
-						</td>
-						<td>
-							<input type="text" id="zip" name="zip">
-						</td>
-					</tr>
+				<tr>
+					<td>
+						<label for="zip">Zipcode (to find lenders): </label>
+					</td>
+					<td>
+						<input type="text" id="zip" name="zip">
+					</td>
+				</tr>
 
-					<!--Approximate payments-->
+				<!--Approximate payments-->
 
-					<!--			first row-->
-					<tr>
-						<td>
-							<b>Approximate Payments:</b>
-						</td>
-						<td>
-							<button id="calculate" type="button">Calculate</button>
-						</td>
-					</tr>
-					<!--			second row-->
-					<tr>
-						<td class="titles">Monthly payment:</td>
-						<td id="month_pay" class="payments"></td>
-					</tr>
+				<!--			first row-->
+				<tr>
+					<td>
+						<b>Approximate Payments:</b>
+					</td>
+					<td>
+						<button id="calculate" type="button">Calculate</button>
+					</td>
+				</tr>
+				<!--			second row-->
+				<tr>
+					<td class="titles">Monthly payment:</td>
+					<td id="month_pay" class="payments"></td>
+				</tr>
 
-					<!--third-->
-					<tr>
-						<td class="titles">Total payment:</td>
-						<td id="total_pay" class="payments"></td>
-					</tr>
-					<!--			fourth row-->
-					<tr>
-						<td class="titles">Total Interest:</td>
-						<td id="total_interest" class="payments"></td>
-					</tr>
+				<!--third-->
+				<tr>
+					<td class="titles">Total payment:</td>
+					<td id="total_pay" class="payments"></td>
+				</tr>
+				<!--			fourth row-->
+				<tr>
+					<td class="titles">Total Interest:</td>
+					<td id="total_interest" class="payments"></td>
+				</tr>
 
-				</table>
-				<p>
-					<span><b>Sponsors:</b></span>
-					Apply for your loan with one of these lenders:
-					<ul>
-						<li><a href="#">Bank of JavaScript</a></li>
-						<li><a href="#">HTML Credit Union</a></li>
-					</ul>
-				</p>
+			</table>
+			<p>
+				<span><b>Sponsors:</b></span>
+				Apply for your loan with one of these lenders:
+				<ul>
+					<li><a href="#">Bank of JavaScript</a></li>
+					<li><a href="#">HTML Credit Union</a></li>
+				</ul>
+			</p>
 
-			</form>
-			<script src="js/script.js"></script>
-		</div>
-	</body>
+		</form>
+		<script src="js/script.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+	</div>
+</body>
 
 </html>
